@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!-- 页面描述 -->
+		<meta name="description" content="新年音乐会" />
+		<!-- 页面关键词 -->
+		<meta name="keywords" content="新年音乐会" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  		<meta content="target-densitydpi=320,width=320,user-scalable=no" name="viewport">
+    	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport" />
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="applicable-device" content="mobile">
+		<!-- iOS 图标 end -->
+		<title>新年音乐会</title>
+		<link rel="stylesheet" type="text/css" href="./css/animate.css" />
+		<link rel="stylesheet" type="text/css" href="./css/css.css" />
+	</head>
+	<body>
+		<audio autoplay="autoplay" loop="loop" preload="auto" src="img/bgm.mp3" >
+			当前浏览器不支持audio
+		</audio>
+		<style type="text/css">
+		     audio{
+		             display: none;
+		         }
+		</style>
+		<div class="main">
+			<div class="home">
+				<div class="home-title">
+					<div class="home-titleyw wow bounceInUp" data-wow-iteration="1" data-wow-duration="3s">
+						南京市妇女儿童活动中心
+					</div>
+					<div class="home-titleyw wow bounceInDown" data-wow-iteration="1" data-wow-duration="3s">
+						新年音乐会
+					</div>
+				</div>
+				<div class="piaofu"  >
+					<img src="img/piaofu.png" class="wow bounceInLeft"  data-wow-iteration="1" data-wow-duration="3s">
+				</div>
+				<div class="wow rollIn home-yah" data-wow-iteration="1" data-wow-duration="3s">
+					<img src="img/yaoqinghan.png"  >
+				</div>
+				<div class="piaofu1"  >
+					<img src="img/piaofu.png" class="wow bounceInLeft"  data-wow-iteration="1" data-wow-duration="3s">
+				</div>
+			</div>
+
+			<div class="home">
+				<div class="piaofu ">
+					<img src="img/piaofu.png" class="wow bounceInLeft"  data-wow-iteration="1" data-wow-duration="3s">
+				</div>
+			 	<script language="javascript" type="text/javascript">
+				 	function cheackbook(){
+						var form=document.form_book;
+						if (form.name.value.replace(/ /g,"")==""){
+							alert("姓名不能为空，请重新填写");
+							form.name.focus();
+							return false;
+						}
+						else if (form.name.value.replace(/ /g,"").length<2){
+							alert("姓名字数太短了，请填写真实姓名");
+							form.name.focus();
+							return false;
+						}
+						else if (form.name.value.replace(/ /g,"").length>10){
+							alert("姓名字数太长了，请填写真实姓名");
+							form.name.focus();
+							return false;
+						}
+				</script>
+			
+				<form action="/message_sj.php" method="POST"  name="form_book" onSubmit="return cheackbook();" enctype="multipart/form-data" >
+					<input type="hidden" name="refer" value="#"/>
+					<div class="home-name wow bounceInLeft" data-wow-iteration="1" data-wow-duration="3s">
+						学员姓名
+					</div>
+					<div class="home-input wow bounceInRight" data-wow-iteration="1" data-wow-duration="2s">
+						<input name="name" type="text" class="intxt" id="name" value='' />
+					</div>
+					<div class="submit wow bounceInLeft"  data-wow-iteration="1" data-wow-duration="2s">
+						<input type="submit" name="submit" value="抽座位号" class="coolbg" />
+					</div>
+					<script>
+						function getArrayItems(arr, num) {
+    						var temp_array = new Array();
+    						for (var index in arr) {
+        						temp_array.push(arr[index]);
+    						}
+    						var return_array = new Array();
+    						for (var i = 0; i<num; i++) {
+        						if (temp_array.length>0) {
+            						var arrIndex = Math.floor(Math.random()*temp_array.length);
+									return_array[i] = temp_array[arrIndex];
+            						temp_array.splice(arrIndex, 1);
+        						} else {
+            						break;
+            					}
+    						}
+    						return return_array;
+						}
+						var stu1=['蔡佳娢','曹陈轶','曹星宇','陈君苒','陈倬',
+        						  '储睿知','单和平','范佳禾','高欣玥','顾轶天',
+        						  '顾梓馨','贺景怡','姜子昂','李晗语','李乐忱',
+        						  '李乐怡','李沁仪','李尚泽','罗米','秦溱溱',
+								  '邵一婷','史曼倪','孙忱宇','汤雨澄','唐静妍',
+								  '王远钧','王昭颖','王子睿','王梓睿','吴鸿泽',
+								  '吴杺伊','夏若涵','徐雪菲','许诺','杨乃恩',
+								  '杨云舒','于小冉','俞霂萱','庾皓晴','庾皓天',
+								  '张宸语','张瞿菡','张琳浠','张茉妍','张舒雅',
+								  '赵宛瑜','钟怡然','周末','周思诺','周心瑜',
+								  '朱沁垚','舒杨洋','张泽睿'];
+						var stu1d=['史曼倪', '高欣玥', '庾皓天', '杨乃恩', '李乐怡', '汤雨澄', '李晗语', '罗米', '邵一婷', '李尚泽', '张琳浠', '舒杨洋', '王梓睿', '张舒雅', '周末', '吴鸿泽', '曹星宇', '姜子昂', '于小冉', '朱沁垚'];
+
+					</script>
+				</form>
+				<div class="piaofu1"  >
+					<img src="img/piaofu.png" class="wow bounceInLeft"  data-wow-iteration="1" data-wow-duration="3s">
+				</div>
+			</div>
+		</div>
+		<script src="js/wow.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		new WOW().init();  
+		</script> 
+	</body>
+</html>
+
